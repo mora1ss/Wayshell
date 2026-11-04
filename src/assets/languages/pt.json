@@ -325,7 +325,15 @@
       "workspaces": {
         "title": "Quantidade de workspaces a exibir",
         "disc": "Nota: isto não afeta a quantidade real de workspaces no compositor",
-        "desc": "Número de workspaces a exibir"
+        "desc": "Número de workspaces a exibir",
+        "per_monitor": {
+          "title": "Numeração por monitor",
+          "desc": "Só no Hyprland. Numera os workspaces a partir de 1 em cada monitor e define quantos cada monitor possui",
+          "unavailable": "Disponível apenas no Hyprland"
+        },
+        "monitor_count": {
+          "desc": "Workspaces deste monitor"
+        }
       },
       "opacity": {
         "title": "Opacidade da barra",
@@ -371,6 +379,12 @@
         "show_date": {
           "title": "Mostrar data",
           "desc": "Exibir o texto da data ao lado do relógio"
+        }
+      },
+      "media": {
+        "hide_when_idle": {
+          "title": "Esconder quando nada está a tocar",
+          "desc": "Esconde o módulo da barra enquanto não há media ativa"
         }
       }
     },

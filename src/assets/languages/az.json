@@ -323,7 +323,15 @@
       "workspaces": {
         "title": "Göstəriləcək iş sahələrinin sayını seçin",
         "disc": "Qeyd: bu, görüntü birləşdiricisindəki iş sahələrinin həqiqi sayına təsir etmir",
-        "desc": "Göstəriləcək iş sahələrinin sayı"
+        "desc": "Göstəriləcək iş sahələrinin sayı",
+        "per_monitor": {
+          "title": "Per-monitor numbering",
+          "desc": "Hyprland only. Number workspaces from 1 on each monitor and set how many workspaces each monitor owns",
+          "unavailable": "Available only on Hyprland"
+        },
+        "monitor_count": {
+          "desc": "Workspaces this monitor owns"
+        }
       },
       "opacity": {
         "title": "Zolağın qeyri-şəffaflığı",
@@ -369,6 +377,12 @@
         "show_date": {
           "title": "Tarixi göstər",
           "desc": "Saatın yanında tarix mətnini göstərin"
+        }
+      },
+      "media": {
+        "hide_when_idle": {
+          "title": "Hide when nothing is playing",
+          "desc": "Hide the widget from the bar while no media is active"
         }
       }
     },

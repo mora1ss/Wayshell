@@ -326,7 +326,15 @@
       "workspaces": {
         "title": "Количество рабочих пространств для отображения",
         "disc": "Примечание: это не влияет на фактическое количество рабочих пространств в композиторе",
-        "desc": "Количество отображаемых рабочих столов"
+        "desc": "Количество отображаемых рабочих столов",
+        "per_monitor": {
+          "title": "Per-monitor numbering",
+          "desc": "Hyprland only. Number workspaces from 1 on each monitor and set how many workspaces each monitor owns",
+          "unavailable": "Available only on Hyprland"
+        },
+        "monitor_count": {
+          "desc": "Workspaces this monitor owns"
+        }
       },
       "opacity": {
         "title": "Прозрачность панели",
@@ -372,6 +380,12 @@
         "show_date": {
           "title": "Показывать дату",
           "desc": "Отображать текст даты рядом с часами"
+        }
+      },
+      "media": {
+        "hide_when_idle": {
+          "title": "Hide when nothing is playing",
+          "desc": "Hide the widget from the bar while no media is active"
         }
       }
     },

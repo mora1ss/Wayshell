@@ -326,7 +326,15 @@
       "workspaces": {
         "title": "Elegir cantidad de espacios de trabajo a mostrar",
         "disc": "Nota: esto no afecta la cantidad real de espacios de trabajo en el compositor",
-        "desc": "Número de espacios de trabajo a mostrar"
+        "desc": "Número de espacios de trabajo a mostrar",
+        "per_monitor": {
+          "title": "Per-monitor numbering",
+          "desc": "Hyprland only. Number workspaces from 1 on each monitor and set how many workspaces each monitor owns",
+          "unavailable": "Available only on Hyprland"
+        },
+        "monitor_count": {
+          "desc": "Workspaces this monitor owns"
+        }
       },
       "opacity": {
         "title": "Opacidad de la barra",
@@ -372,6 +380,12 @@
         "show_date": {
           "title": "Mostrar fecha",
           "desc": "Mostrar el texto de la fecha junto al reloj"
+        }
+      },
+      "media": {
+        "hide_when_idle": {
+          "title": "Hide when nothing is playing",
+          "desc": "Hide the widget from the bar while no media is active"
         }
       }
     },

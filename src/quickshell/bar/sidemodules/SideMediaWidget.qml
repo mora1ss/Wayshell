@@ -41,8 +41,23 @@ Rectangle {
         return MprisController.activePlayer;
     }
 
+    property int configRevision: 0
+
+    Connections {
+        target: (typeof Config !== "undefined") ? Config : null
+        function onSettingsLoaded() { sideMediaRoot.configRevision++; }
+        function onRawSettingsChanged() { sideMediaRoot.configRevision++; }
+    }
+
+    readonly property bool hideWhenIdle: {
+        let dummy = configRevision;
+        let bs = (typeof Config !== "undefined" && Config.rawSettings) ? Config.rawSettings.bar : null;
+        return !!(bs && bs.mediaHideWhenIdle);
+    }
+
     property bool hasTargetPlayer: targetPlayer !== null
     property bool isMediaActive: targetPlayer !== null && targetPlayer.playbackState !== MprisPlaybackState.Stopped && targetPlayer.trackTitle !== ""
+    readonly property bool idleHidden: hideWhenIdle && !isMediaActive
     property bool isPlaying: targetPlayer ? (targetPlayer.playbackState === MprisPlaybackState.Playing || targetPlayer.isPlaying) : false
     readonly property bool isRightBar: barWindow ? (barWindow.barPosition === "right") : false
 
@@ -63,7 +78,7 @@ Rectangle {
     property real targetWidth: barWindow ? (isGrouped ? barWindow.barHeight - 8 : ((isSolid && distinctPills) ? barWindow.barHeight - 6 : barWindow.barHeight)) : (isGrouped ? 22 : ((isSolid && distinctPills) ? 24 : 30))
     property real baseWidth: targetWidth
     property real baseHeight: barWindow ? barWindow.s(isCompact ? 118 : 130) : (isCompact ? 118 : 130)
-    property real targetHeight: baseHeight
+    property real targetHeight: (moduleActive && !idleHidden) ? baseHeight : 0
 
     property real targetX: isRightBar ? (parent ? (parent.width - baseWidth) : 0) : 0
     property real targetY: 0
@@ -79,7 +94,8 @@ Rectangle {
     border.width: 0
     border.color: "transparent"
 
-    opacity: moduleActive ? ((barWindow && barWindow.barOpacity !== undefined) ? barWindow.barOpacity : 1.0) : 0.0
+    opacity: (moduleActive && !idleHidden) ? ((barWindow && barWindow.barOpacity !== undefined) ? barWindow.barOpacity : 1.0) : 0.0
+    enabled: moduleActive && !idleHidden
     visible: opacity > 0 && (!barWindow || !barWindow.positionChanging)
 
     Behavior on x {
