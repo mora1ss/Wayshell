@@ -1,0 +1,78 @@
+binds {
+    Mod+Return { spawn "kitty"; }
+    Mod+F { spawn "firefox"; }
+    Mod+E { spawn "nautilus"; }
+    Mod+Backspace { toggle-overview; }
+    Mod+Q { close-window; }
+    Mod+Shift+F { toggle-window-floating; }
+
+    XF86MonBrightnessDown { spawn "wayshell" "brightness" "lower"; }
+    XF86MonBrightnessUp { spawn "wayshell" "brightness" "raise"; }
+
+    Print { spawn "wayshell" "screenshot"; }
+    Shift+Print { spawn "wayshell" "screenshot" "--edit"; }
+    Super+Print { spawn "wayshell" "screenshot" "--full"; }
+    Super+Shift+Print { spawn "wayshell" "screenshot" "--full" "--edit"; }
+
+    XF86PowerOff { spawn "wayshell" "lock"; }
+    Mod+L { spawn "wayshell" "lock"; }
+
+    Mod+Space { spawn "playerctl" "play-pause"; }
+    XF86AudioPause { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioMicMute { spawn "wayshell" "volume" "mic-toggle"; }
+    XF86AudioMute { spawn "wayshell" "volume" "mute-toggle"; }
+    XF86AudioLowerVolume { spawn "wayshell" "volume" "lower"; }
+    XF86AudioRaiseVolume { spawn "wayshell" "volume" "raise"; }
+
+    Mod+R { spawn "wayshell" "reload"; }
+    Mod+C { spawn "wayshell" "msg" "toggle" "clipboard"; }
+    Mod+D { spawn "wayshell" "msg" "toggle" "launcher"; }
+    Mod+M { spawn "wayshell" "msg" "toggle" "music"; }
+    Mod+B { spawn "wayshell" "msg" "toggle" "system"; }
+    Mod+W { spawn "wayshell" "msg" "toggle" "wallpaper"; }
+    Mod+S { spawn "wayshell" "msg" "toggle" "calendar"; }
+    Mod+N { spawn "wayshell" "msg" "toggle" "network"; }
+    Mod+V { spawn "wayshell" "msg" "toggle" "volume"; }
+    Mod+H { spawn "wayshell" "msg" "toggle" "guide"; }
+    Mod+A { spawn "wayshell" "msg" "toggle" "autohide"; }
+
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-or-workspace-up; }
+    Mod+Down { focus-window-or-workspace-down; }
+
+    Mod+Ctrl+Left { move-column-left; }
+    Mod+Ctrl+Right { move-column-right; }
+    Mod+Ctrl+Up { move-column-to-workspace-up; }
+    Mod+Ctrl+Down { move-column-to-workspace-down; }
+
+    Mod+Shift+Left { set-column-width "-5%"; }
+    Mod+Shift+Right { set-column-width "+5%"; }
+    Mod+Shift+Up { set-window-height "-5%"; }
+    Mod+Shift+Down { set-window-height "+5%"; }
+
+    Mod+1 { spawn "wayshell" "msg" "workspace" "1"; }
+    Mod+2 { spawn "wayshell" "msg" "workspace" "2"; }
+    Mod+3 { spawn "wayshell" "msg" "workspace" "3"; }
+    Mod+4 { spawn "wayshell" "msg" "workspace" "4"; }
+    Mod+5 { spawn "wayshell" "msg" "workspace" "5"; }
+    Mod+6 { spawn "wayshell" "msg" "workspace" "6"; }
+    Mod+7 { spawn "wayshell" "msg" "workspace" "7"; }
+    Mod+8 { spawn "wayshell" "msg" "workspace" "8"; }
+    Mod+9 { spawn "wayshell" "msg" "workspace" "9"; }
+    Mod+0 { spawn "wayshell" "msg" "workspace" "10"; }
+
+    Mod+Shift+1 { spawn "wayshell" "msg" "workspace" "1" "move"; }
+    Mod+Shift+2 { spawn "wayshell" "msg" "workspace" "2" "move"; }
+    Mod+Shift+3 { spawn "wayshell" "msg" "workspace" "3" "move"; }
+    Mod+Shift+4 { spawn "wayshell" "msg" "workspace" "4" "move"; }
+    Mod+Shift+5 { spawn "wayshell" "msg" "workspace" "5" "move"; }
+    Mod+Shift+6 { spawn "wayshell" "msg" "workspace" "6" "move"; }
+    Mod+Shift+7 { spawn "wayshell" "msg" "workspace" "7" "move"; }
+    Mod+Shift+8 { spawn "wayshell" "msg" "workspace" "8" "move"; }
+    Mod+Shift+9 { spawn "wayshell" "msg" "workspace" "9" "move"; }
+    Mod+Shift+0 { spawn "wayshell" "msg" "workspace" "10" "move"; }
+}

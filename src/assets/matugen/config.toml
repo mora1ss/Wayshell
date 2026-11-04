@@ -1,0 +1,27 @@
+[config]
+reload_apps = false
+
+[templates.quickshell]
+input_path = "templates/wayshell_matugen_colors.json.template"
+output_path = "~/.local/state/wayshell/qs_colors.json"
+
+[templates.fastfetch]
+input_path = "templates/fastfetch.jsonc.template"
+output_path = "~/.config/fastfetch/config.jsonc"
+
+[templates.kitty]
+input_path = "templates/kitty-colors.conf.template"
+output_path = "~/.config/kitty/colors.conf"
+
+[templates.cava]
+input_path = "templates/cava-colors.ini.template"
+output_path = "~/.config/cava/config"
+
+[templates.gtk3]
+input_path = "templates/gtk.css"
+output_path = "~/.config/gtk-3.0/gtk.css"
+post_hook = "gsettings set org.gnome.desktop.interface color-scheme prefer-dark && gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark"
+
+[templates.gtk4]
+input_path = "templates/gtk.css"
+output_path = "~/.config/gtk-4.0/gtk.css"

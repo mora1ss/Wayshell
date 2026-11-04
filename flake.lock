@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1789785513,
+        "narHash": "sha256-B44WL6h0XoLjJ41bUPJk0X5SDinLCII//6EcBLXKiJ0=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "20b1ddd1aa5ace70c9468305030aa4f9ef79671b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "hsh-wallpapers": "hsh-wallpapers"
+      }
+    },
+    "hsh-wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790338978,
+        "narHash": "sha256-9bGrq/3BpYgcjE28EG0Ga/d9HV8RoBE5TTwUBVIxsQk=",
+        "owner": "mora1ss",
+        "repo": "shell-wallpapers",
+        "rev": "344190b76a176c6817b94c0a24b4152153d7e2f2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mora1ss",
+        "repo": "shell-wallpapers",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

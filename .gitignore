@@ -1,0 +1,8 @@
+src/assets/languages/add.py
+changelog.py
+
+result
+.direnv
+__pycache__/
+*.pyc
+*.log
